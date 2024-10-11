@@ -33,5 +33,6 @@ public class Main {
             myList[j] = temp;
             System.out.println(myList[i]);
         }
+        in.close();
         }
     }
