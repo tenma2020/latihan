@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class App {
     static int maxLine = 30;
     static String[] ballLine = new String[maxLine];
-    String[] balls = { "@", "&", "*", "+", "-" };
+    static String[] balls = { "@", "&", "*", "+", "-" };
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.println("==============================");
@@ -30,12 +30,13 @@ public class App {
 
                 do {
                     System.out.print("[");
-                    for (ballLine = 0; ballLine = ballLine.equals(maxLine); ballLine++) {
-                        System.out.print(ballLine);
+                    for (int i = 0; i < ballLine.length; i++){
+                        System.out.print(i);
                     }
                     System.out.println("]");
 
-                    int ee = in.nextInt();
+                    System.out.println("Your ball: ");
+                    int i = in.nextInt();
                 } while (ballLine.length == maxLine);
             } else if (choice == 2) {
                 in.close();
