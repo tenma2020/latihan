@@ -3,10 +3,47 @@
  */
 package kodokzuma;
 
+import java.util.Scanner;
+
 public class App {
-   public static void main(String[] args) {
-    for(int i = 0; i < 101; i++){
-        System.out.println(i);
+    static int maxLine = 30;
+    static String[] ballLine = new String[maxLine];
+    String[] balls = { "@", "&", "*", "+", "-" };
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("==============================");
+        System.out.println("Kodok Zuma Burique Edition");
+        System.out.println();
+        System.out.println("TIF-D Productions");
+        System.out.println("==============================");
+        while (true) {
+            System.out.println("==============================");
+            System.out.println("1. Play Game");
+            System.out.println("2. Exit");
+            System.out.println("==============================");
+            int choice = in.nextInt();
+
+            if (choice == 1) {
+                System.out.println("==============================");
+                System.out.println("Game Start!");
+                System.out.println("==============================");
+
+                do {
+                    System.out.print("[");
+                    for (ballLine = 0; ballLine = ballLine.equals(maxLine); ballLine++) {
+                        System.out.print(ballLine);
+                    }
+                    System.out.println("]");
+
+                    int ee = in.nextInt();
+                } while (ballLine.length == maxLine);
+            } else if (choice == 2) {
+                in.close();
+                System.out.println("Thank You!");
+            } else {
+                System.err.println("Error Input!");
+                System.out.println();
+            }
+        }
     }
-   }
 }
